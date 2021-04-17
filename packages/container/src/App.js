@@ -1,14 +1,17 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import MarketingApp from './components/MarketingApp'
+import Header from './components/Header'
 
 export default () => {
   const el = document.querySelector('#marketing_root')
 
   return(
-      <>
-      <h1>Hi!</h1>
-      <hr/>
-      <MarketingApp></MarketingApp>
-      </>
+      <BrowserRouter>
+        <div>
+          <Header/>
+          <MarketingApp />
+        </div>
+      </BrowserRouter>
     )
   } 
